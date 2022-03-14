@@ -305,5 +305,11 @@ namespace PT_1_v2
                 }
             }
         }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+        }
     }
 }

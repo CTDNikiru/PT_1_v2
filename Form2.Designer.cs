@@ -84,6 +84,8 @@ namespace PT_1_v2
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(645, 489);
+            this.MinimumSize = new System.Drawing.Size(645, 489);
             this.Name = "Form2";
             this.Text = "История";
             this.Load += new System.EventHandler(this.Form2_Load);

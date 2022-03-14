@@ -54,7 +54,6 @@ namespace PT_1_v2
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.выводToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.историяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Input2 = new System.Windows.Forms.Label();
@@ -340,7 +339,6 @@ namespace PT_1_v2
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.выводToolStripMenuItem,
             this.историяToolStripMenuItem,
             this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -348,12 +346,6 @@ namespace PT_1_v2
             this.menuStrip1.Size = new System.Drawing.Size(265, 24);
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // выводToolStripMenuItem
-            // 
-            this.выводToolStripMenuItem.Name = "выводToolStripMenuItem";
-            this.выводToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.выводToolStripMenuItem.Text = "Вывод";
             // 
             // историяToolStripMenuItem
             // 
@@ -367,6 +359,7 @@ namespace PT_1_v2
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
+            this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
             // 
             // Input2
             // 
@@ -461,7 +454,6 @@ namespace PT_1_v2
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.TrackBar trackBar2;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem выводToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem историяToolStripMenuItem;
         private System.Windows.Forms.Label Input2;
         private System.Windows.Forms.Label Input3;
