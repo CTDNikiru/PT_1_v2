@@ -294,8 +294,15 @@ namespace PT_1_v2
             }
             catch(Exception z)
             {
-                Input1.Text = Input1.Text.Remove(Input1.Text.Length-1, 1);
-                Input1.SelectionStart = Input1.Text.Length;
+                if (Input1.Text.Length > 1)
+                {
+                    Input1.Text = Input1.Text.Remove(Input1.Text.Length - 1, 1);
+                    Input1.SelectionStart = Input1.Text.Length;
+                }
+                else
+                {
+                    Input1.Text = "";
+                }
             }
         }
     }
