@@ -284,5 +284,19 @@ namespace PT_1_v2
             Form2 form2 = new Form2(history);
             form2.Show();
         }
+
+        private void Input1_TextChanged(object sender, EventArgs e)
+        {
+            Checker checker = new Checker();
+            try
+            {
+                checker.IsOkay(Input1.Text, true, Convert.ToInt32(Input2.Text));
+            }
+            catch(Exception z)
+            {
+                Input1.Text = Input1.Text.Remove(Input1.Text.Length-1, 1);
+                Input1.SelectionStart = Input1.Text.Length;
+            }
+        }
     }
 }

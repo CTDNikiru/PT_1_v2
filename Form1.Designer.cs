@@ -56,9 +56,9 @@ namespace PT_1_v2
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.выводToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.историяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Input2 = new System.Windows.Forms.Label();
             this.Input3 = new System.Windows.Forms.Label();
-            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -90,6 +90,7 @@ namespace PT_1_v2
             this.Input1.Name = "Input1";
             this.Input1.Size = new System.Drawing.Size(191, 29);
             this.Input1.TabIndex = 2;
+            this.Input1.TextChanged += new System.EventHandler(this.Input1_TextChanged);
             // 
             // BTN_1
             // 
@@ -361,6 +362,12 @@ namespace PT_1_v2
             this.историяToolStripMenuItem.Text = "История";
             this.историяToolStripMenuItem.Click += new System.EventHandler(this.историяToolStripMenuItem_Click);
             // 
+            // справкаToolStripMenuItem
+            // 
+            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.справкаToolStripMenuItem.Text = "Справка";
+            // 
             // Input2
             // 
             this.Input2.AutoSize = true;
@@ -380,12 +387,6 @@ namespace PT_1_v2
             this.Input3.Size = new System.Drawing.Size(20, 24);
             this.Input3.TabIndex = 28;
             this.Input3.Text = "2";
-            // 
-            // справкаToolStripMenuItem
-            // 
-            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.справкаToolStripMenuItem.Text = "Справка";
             // 
             // Form1
             // 
