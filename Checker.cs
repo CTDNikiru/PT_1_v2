@@ -8,12 +8,18 @@ namespace PT_1_v2
 {
     public class Checker
     {
-        public bool IsOkay(string input, bool needSeparator)
+        public bool IsOkay(string input, bool needSeparator, int cc)
         {
             if(input.Length == 0)
             {
                 throw new Exception("Empty input");
             }
+
+            if(input.Length == 1 && (input[0] == ','|| input[0] == '.'))
+            {
+                throw new Exception("Enter more symbols");
+            }
+
             bool haveSeparator = false;
             for(int i = 0; i<input.Length; i++)
             {
@@ -27,16 +33,32 @@ namespace PT_1_v2
                     {
                         if ((input[i] == ',' || input[i] == '.') && needSeparator)
                         {
-                            throw new Exception("Input error: many separators");
+                            throw new Exception("Many separators");
                         }
                         else if (input[i] == ',' || input[i] == '.')
                         {
-                            throw new Exception("Input error: separator not needed");
+                            throw new Exception("Separator not needed");
+                        }
+                        else if (input[i] < 'A' || input[i] > 'F')
+                        {
+                            throw new Exception("Undefind symbol");
                         }
                         else
                         {
-                            throw new Exception("Input error: not a number");
+                            //checker >=10
+                            if (input[i] - 'A' >= cc-10)
+                            {
+                                throw new Exception("Out of system");
+                            }
                         }
+                    }
+                }
+                else
+                {
+                    //checker <= 9
+                    if(input[i] - '0' >= cc)
+                    {
+                        throw new Exception("Out of system");
                     }
                 }
 

@@ -32,7 +32,6 @@ namespace PT_1_v2
             this.StartBTN = new System.Windows.Forms.Button();
             this.OutputLB = new System.Windows.Forms.Label();
             this.Input1 = new System.Windows.Forms.TextBox();
-            this.Input2 = new System.Windows.Forms.TextBox();
             this.BTN_1 = new System.Windows.Forms.Button();
             this.BTN_2 = new System.Windows.Forms.Button();
             this.BTN_3 = new System.Windows.Forms.Button();
@@ -54,10 +53,12 @@ namespace PT_1_v2
             this.BTN_ERONE = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.Input3 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.выводToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.историяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Input2 = new System.Windows.Forms.Label();
+            this.Input3 = new System.Windows.Forms.Label();
+            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -90,15 +91,6 @@ namespace PT_1_v2
             this.Input1.Size = new System.Drawing.Size(191, 29);
             this.Input1.TabIndex = 2;
             // 
-            // Input2
-            // 
-            this.Input2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Input2.Location = new System.Drawing.Point(209, 38);
-            this.Input2.Name = "Input2";
-            this.Input2.Size = new System.Drawing.Size(44, 29);
-            this.Input2.TabIndex = 3;
-            this.Input2.Text = "2";
-            // 
             // BTN_1
             // 
             this.BTN_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -112,6 +104,7 @@ namespace PT_1_v2
             // 
             // BTN_2
             // 
+            this.BTN_2.Enabled = false;
             this.BTN_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_2.Location = new System.Drawing.Point(59, 252);
             this.BTN_2.Name = "BTN_2";
@@ -123,6 +116,7 @@ namespace PT_1_v2
             // 
             // BTN_3
             // 
+            this.BTN_3.Enabled = false;
             this.BTN_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_3.Location = new System.Drawing.Point(109, 252);
             this.BTN_3.Name = "BTN_3";
@@ -134,6 +128,7 @@ namespace PT_1_v2
             // 
             // BTN_4
             // 
+            this.BTN_4.Enabled = false;
             this.BTN_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_4.Location = new System.Drawing.Point(9, 302);
             this.BTN_4.Name = "BTN_4";
@@ -145,6 +140,7 @@ namespace PT_1_v2
             // 
             // BTN_5
             // 
+            this.BTN_5.Enabled = false;
             this.BTN_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_5.Location = new System.Drawing.Point(59, 302);
             this.BTN_5.Name = "BTN_5";
@@ -156,6 +152,7 @@ namespace PT_1_v2
             // 
             // BTN_6
             // 
+            this.BTN_6.Enabled = false;
             this.BTN_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_6.Location = new System.Drawing.Point(109, 302);
             this.BTN_6.Name = "BTN_6";
@@ -167,6 +164,7 @@ namespace PT_1_v2
             // 
             // BTN_7
             // 
+            this.BTN_7.Enabled = false;
             this.BTN_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_7.Location = new System.Drawing.Point(9, 352);
             this.BTN_7.Name = "BTN_7";
@@ -178,6 +176,7 @@ namespace PT_1_v2
             // 
             // BTN_8
             // 
+            this.BTN_8.Enabled = false;
             this.BTN_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_8.Location = new System.Drawing.Point(59, 352);
             this.BTN_8.Name = "BTN_8";
@@ -189,6 +188,7 @@ namespace PT_1_v2
             // 
             // BTN_9
             // 
+            this.BTN_9.Enabled = false;
             this.BTN_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_9.Location = new System.Drawing.Point(109, 352);
             this.BTN_9.Name = "BTN_9";
@@ -200,6 +200,7 @@ namespace PT_1_v2
             // 
             // BTN_A
             // 
+            this.BTN_A.Enabled = false;
             this.BTN_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_A.Location = new System.Drawing.Point(159, 302);
             this.BTN_A.Name = "BTN_A";
@@ -211,6 +212,7 @@ namespace PT_1_v2
             // 
             // BTN_B
             // 
+            this.BTN_B.Enabled = false;
             this.BTN_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_B.Location = new System.Drawing.Point(159, 352);
             this.BTN_B.Name = "BTN_B";
@@ -222,6 +224,7 @@ namespace PT_1_v2
             // 
             // BTN_C
             // 
+            this.BTN_C.Enabled = false;
             this.BTN_C.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_C.Location = new System.Drawing.Point(159, 402);
             this.BTN_C.Name = "BTN_C";
@@ -233,6 +236,7 @@ namespace PT_1_v2
             // 
             // BTN_D
             // 
+            this.BTN_D.Enabled = false;
             this.BTN_D.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_D.Location = new System.Drawing.Point(209, 302);
             this.BTN_D.Name = "BTN_D";
@@ -244,6 +248,7 @@ namespace PT_1_v2
             // 
             // BTN_E
             // 
+            this.BTN_E.Enabled = false;
             this.BTN_E.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_E.Location = new System.Drawing.Point(209, 352);
             this.BTN_E.Name = "BTN_E";
@@ -255,6 +260,7 @@ namespace PT_1_v2
             // 
             // BTN_F
             // 
+            this.BTN_F.Enabled = false;
             this.BTN_F.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BTN_F.Location = new System.Drawing.Point(209, 402);
             this.BTN_F.Name = "BTN_F";
@@ -330,20 +336,12 @@ namespace PT_1_v2
             this.trackBar2.Value = 2;
             this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
             // 
-            // Input3
-            // 
-            this.Input3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Input3.Location = new System.Drawing.Point(209, 162);
-            this.Input3.Name = "Input3";
-            this.Input3.Size = new System.Drawing.Size(44, 29);
-            this.Input3.TabIndex = 25;
-            this.Input3.Text = "2";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.выводToolStripMenuItem,
-            this.историяToolStripMenuItem});
+            this.историяToolStripMenuItem,
+            this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(265, 24);
@@ -361,6 +359,33 @@ namespace PT_1_v2
             this.историяToolStripMenuItem.Name = "историяToolStripMenuItem";
             this.историяToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.историяToolStripMenuItem.Text = "История";
+            this.историяToolStripMenuItem.Click += new System.EventHandler(this.историяToolStripMenuItem_Click);
+            // 
+            // Input2
+            // 
+            this.Input2.AutoSize = true;
+            this.Input2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Input2.Location = new System.Drawing.Point(233, 41);
+            this.Input2.Name = "Input2";
+            this.Input2.Size = new System.Drawing.Size(20, 24);
+            this.Input2.TabIndex = 27;
+            this.Input2.Text = "2";
+            // 
+            // Input3
+            // 
+            this.Input3.AutoSize = true;
+            this.Input3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Input3.Location = new System.Drawing.Point(233, 165);
+            this.Input3.Name = "Input3";
+            this.Input3.Size = new System.Drawing.Size(20, 24);
+            this.Input3.TabIndex = 28;
+            this.Input3.Text = "2";
+            // 
+            // справкаToolStripMenuItem
+            // 
+            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
+            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.справкаToolStripMenuItem.Text = "Справка";
             // 
             // Form1
             // 
@@ -368,6 +393,7 @@ namespace PT_1_v2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(265, 456);
             this.Controls.Add(this.Input3);
+            this.Controls.Add(this.Input2);
             this.Controls.Add(this.trackBar2);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.BTN_ERONE);
@@ -389,7 +415,6 @@ namespace PT_1_v2
             this.Controls.Add(this.BTN_3);
             this.Controls.Add(this.BTN_2);
             this.Controls.Add(this.BTN_1);
-            this.Controls.Add(this.Input2);
             this.Controls.Add(this.Input1);
             this.Controls.Add(this.OutputLB);
             this.Controls.Add(this.StartBTN);
@@ -398,7 +423,7 @@ namespace PT_1_v2
             this.MaximumSize = new System.Drawing.Size(281, 495);
             this.MinimumSize = new System.Drawing.Size(281, 495);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Converter";
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -413,7 +438,6 @@ namespace PT_1_v2
         private System.Windows.Forms.Button StartBTN;
         private System.Windows.Forms.Label OutputLB;
         private System.Windows.Forms.TextBox Input1;
-        private System.Windows.Forms.TextBox Input2;
         private System.Windows.Forms.Button BTN_1;
         private System.Windows.Forms.Button BTN_2;
         private System.Windows.Forms.Button BTN_3;
@@ -435,10 +459,12 @@ namespace PT_1_v2
         private System.Windows.Forms.Button BTN_ERONE;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.TrackBar trackBar2;
-        private System.Windows.Forms.TextBox Input3;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem выводToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem историяToolStripMenuItem;
+        private System.Windows.Forms.Label Input2;
+        private System.Windows.Forms.Label Input3;
+        private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
     }
 }
 

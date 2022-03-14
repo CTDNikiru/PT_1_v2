@@ -8,27 +8,82 @@ namespace PT_1_v2
 {
     public class History
     {
-        private List<KeyValuePair<KeyValuePair<double, int>, KeyValuePair<double, int>>> HistoryList;
+        private List<KeyValuePair<KeyValuePair<string, string>, KeyValuePair<string, string>>> HistoryList;
 
-        public void AddCalculation(double input, int inputSystem, double output, int outputSystem)
+        public void AddCalculation(string input, string inputSystem, string output, string outputSystem)
         {
             if(HistoryList == null)
             {
-                HistoryList = new List<KeyValuePair<KeyValuePair<double, int>, KeyValuePair<double, int>>>();
+                HistoryList = new List<KeyValuePair<KeyValuePair<string, string>, KeyValuePair<string, string>>>();
             }
 
-            KeyValuePair<double, int> historyInput = new KeyValuePair<double, int>(input, inputSystem);
-            KeyValuePair<double, int> historyOutput = new KeyValuePair<double, int>(output, outputSystem);
+            KeyValuePair<string, string> historyInput = new KeyValuePair<string, string>(input, inputSystem);
+            KeyValuePair<string, string> historyOutput = new KeyValuePair<string, string>(output, outputSystem);
 
-            HistoryList.Add(new KeyValuePair<KeyValuePair<double, int>, KeyValuePair<double, int>>(historyInput, historyOutput));
+            HistoryList.Add(new KeyValuePair<KeyValuePair<string, string>, KeyValuePair<string, string>>(historyInput, historyOutput));
         }
 
         public string GetAllHistory()
         {
             string result = "";
-            foreach(var item in HistoryList)
+            if(HistoryList != null)
             {
-                result += item.Key.Key + "\t" + item.Key.Value + "\t" + item.Value.Key + "\t" + item.Value.Value + "\n";
+                foreach (var item in HistoryList)
+                {
+                    result += item.Key.Key + "\t" + item.Key.Value + "\t" + item.Value.Key + "\t" + item.Value.Value + "\n";
+                }
+            }
+            return result;
+        }
+
+        public string GetAllInput()
+        {
+            string result = "";
+            if (HistoryList != null)
+            {
+                foreach (var item in HistoryList)
+                {
+                    result += item.Key.Key + "\n";
+                }
+            }
+            return result;
+        }
+
+        public string GetAllInputCC()
+        {
+            string result = "";
+            if (HistoryList != null)
+            {
+                foreach (var item in HistoryList)
+                {
+                    result += item.Key.Value + "\n";
+                }
+            }
+            return result;
+        }
+
+        public string GetAllOut()
+        {
+            string result = "";
+            if (HistoryList != null)
+            {
+                foreach (var item in HistoryList)
+                {
+                    result += item.Value.Key + "\n";
+                }
+            }
+            return result;
+        }
+
+        public string GetAllOutCC()
+        {
+            string result = "";
+            if (HistoryList != null)
+            {
+                foreach (var item in HistoryList)
+                {
+                    result += item.Value.Value + "\n";
+                }
             }
             return result;
         }
