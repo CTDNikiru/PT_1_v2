@@ -23,19 +23,6 @@ namespace PT_1_v2
             HistoryList.Add(new KeyValuePair<KeyValuePair<string, string>, KeyValuePair<string, string>>(historyInput, historyOutput));
         }
 
-        public string GetAllHistory()
-        {
-            string result = "";
-            if(HistoryList != null)
-            {
-                foreach (var item in HistoryList)
-                {
-                    result += item.Key.Key + "\t" + item.Key.Value + "\t" + item.Value.Key + "\t" + item.Value.Value + "\n";
-                }
-            }
-            return result;
-        }
-
         public string GetAllInput()
         {
             string result = "";

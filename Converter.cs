@@ -82,7 +82,7 @@ namespace PT_1_v2
             return result;
         }
 
-        public string DrbToCC(string drb, int cc)
+        private string DrbToCC(string drb, int cc)
         {
             string result = "";
             int toRemove = 0;
@@ -118,7 +118,29 @@ namespace PT_1_v2
             return result;
         }
 
-        public string ZelToCC(int zel, int cc)
+        private double DrbFromCC(string drb, int cc)
+        {
+            double result = 0;
+
+            int bufer = 0;
+
+            for (int i = 1; i < drb.Length + 1; i++)
+            {
+                if (drb[i - 1] < '0' || drb[i - 1] > '9')
+                {
+                    bufer = LetterToInt(drb[i - 1]);
+                }
+                else
+                {
+                    bufer = Convert.ToInt32(drb[i - 1] - '0');
+                }
+                result += bufer * Math.Pow(cc, -i);
+            }
+
+            return result;
+        }
+
+        private string ZelToCC(int zel, int cc)
         {
             string result = "";
             for (int i = 0; i < Capasity; i++)
@@ -136,7 +158,7 @@ namespace PT_1_v2
             return result;
         }
 
-        public double ZelFromCC(string zel, int cc)
+        private double ZelFromCC(string zel, int cc)
         {
             double result = 0;
 
@@ -160,29 +182,7 @@ namespace PT_1_v2
             return result;
         }
 
-        public double DrbFromCC(string drb, int cc)
-        {
-            double result = 0;
-
-            int bufer = 0;
-
-            for(int i = 1; i<drb.Length+1; i++)
-            {
-                if(drb[i-1] < '0' || drb[i-1] > '9')
-                {
-                    bufer = LetterToInt(drb[i-1]);
-                }
-                else
-                {
-                    bufer = Convert.ToInt32(drb[i-1] - '0');
-                }
-                result += bufer * Math.Pow(cc, -i);
-            }
-
-            return result;
-        }
-
-        private static string IntToLetter(int ze)
+        private string IntToLetter(int ze)
         {
             string result = "";
             switch (ze)
@@ -212,7 +212,7 @@ namespace PT_1_v2
             return result;
         }
 
-        public static int LetterToInt(char ze)
+        private int LetterToInt(char ze)
         {
             int result = 0;
             switch (ze)

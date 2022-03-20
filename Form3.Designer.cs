@@ -38,20 +38,19 @@ namespace PT_1_v2
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(489, 144);
+            this.label1.Size = new System.Drawing.Size(489, 96);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Разработано: Рыжковым Никитой, группа ПМИ-91\r\n\r\nИспользование:\r\n1) Выбрать с помо" +
-    "щью ползунков систему счисления\r\n2) Ввести число которое необходимо перевести\r\n3" +
-    ") Нажать кнопку \"Перевести\"";
+            this.label1.Text = "Использование:\r\n1) Выбрать с помощью ползунков систему счисления\r\n2) Ввести число" +
+    " которое необходимо перевести\r\n3) Нажать кнопку \"Перевести\"";
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 172);
+            this.ClientSize = new System.Drawing.Size(515, 117);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(531, 211);
-            this.MinimumSize = new System.Drawing.Size(531, 211);
+            this.MaximumSize = new System.Drawing.Size(531, 156);
+            this.MinimumSize = new System.Drawing.Size(531, 156);
             this.Name = "Form3";
             this.Text = "Справка";
             this.ResumeLayout(false);
