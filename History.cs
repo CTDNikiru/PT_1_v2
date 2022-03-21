@@ -4,29 +4,35 @@ namespace PT_1_v2
 {
     public class History
     {
-        private List<KeyValuePair<KeyValuePair<string, string>, KeyValuePair<string, string>>> HistoryList;
+        private List<string> Inputs;
+        private List<string> InputsCC;
+        private List<string> Outputs;
+        private List<string> OutputsCC;
 
         public void AddCalculation(string input, string inputSystem, string output, string outputSystem)
         {
-            if(HistoryList == null)
+            if(Inputs == null || InputsCC == null || Outputs == null || OutputsCC == null)
             {
-                HistoryList = new List<KeyValuePair<KeyValuePair<string, string>, KeyValuePair<string, string>>>();
+                Inputs = new List<string>();
+                InputsCC = new List<string>();
+                Outputs = new List<string>();
+                OutputsCC = new List<string>();
             }
 
-            KeyValuePair<string, string> historyInput = new KeyValuePair<string, string>(input, inputSystem);
-            KeyValuePair<string, string> historyOutput = new KeyValuePair<string, string>(output, outputSystem);
-
-            HistoryList.Add(new KeyValuePair<KeyValuePair<string, string>, KeyValuePair<string, string>>(historyInput, historyOutput));
+            Inputs.Add(input);
+            InputsCC.Add(inputSystem);
+            Outputs.Add(output);
+            OutputsCC.Add(outputSystem);
         }
 
         public string GetAllInput()
         {
             string result = "";
-            if (HistoryList != null)
+            if (Inputs != null)
             {
-                foreach (var item in HistoryList)
+                foreach (var item in Inputs)
                 {
-                    result += item.Key.Key + "\n";
+                    result += item + "\n";
                 }
             }
             return result;
@@ -35,11 +41,11 @@ namespace PT_1_v2
         public string GetAllInputCC()
         {
             string result = "";
-            if (HistoryList != null)
+            if (InputsCC != null)
             {
-                foreach (var item in HistoryList)
+                foreach (var item in InputsCC)
                 {
-                    result += item.Key.Value + "\n";
+                    result += item + "\n";
                 }
             }
             return result;
@@ -48,11 +54,11 @@ namespace PT_1_v2
         public string GetAllOut()
         {
             string result = "";
-            if (HistoryList != null)
+            if (Outputs != null)
             {
-                foreach (var item in HistoryList)
+                foreach (var item in Outputs)
                 {
-                    result += item.Value.Key + "\n";
+                    result += item + "\n";
                 }
             }
             return result;
@@ -61,11 +67,11 @@ namespace PT_1_v2
         public string GetAllOutCC()
         {
             string result = "";
-            if (HistoryList != null)
+            if (OutputsCC != null)
             {
-                foreach (var item in HistoryList)
+                foreach (var item in OutputsCC)
                 {
-                    result += item.Value.Value + "\n";
+                    result += item + "\n";
                 }
             }
             return result;
