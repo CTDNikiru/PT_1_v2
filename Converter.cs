@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PT_1_v2
 {
     public class Converter
     {
-        int Capasity = 10;
+        private int Capasity;
 
-        public Converter(int cap)
+        public Converter(int cap = 10)
         {
             Capasity = cap;
         }
@@ -25,6 +22,7 @@ namespace PT_1_v2
             string drb = "";
 
             bool isPartial = false;
+
             foreach (var number in input)
             {
                 if (number == ',' || number == '.')
@@ -43,7 +41,6 @@ namespace PT_1_v2
 
             zel = ZelToCC(Convert.ToInt32(zel), cc);
             drb = DrbToCC(drb, cc);
-
 
             result = zel + "," + drb;
 
@@ -75,7 +72,6 @@ namespace PT_1_v2
                     zel += number;
                 }
             }
-
 
             result = (ZelFromCC(zel, cc) + DrbFromCC(drb, cc)).ToString();
 

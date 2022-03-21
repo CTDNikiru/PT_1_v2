@@ -23,15 +23,14 @@ namespace PT_1_v2
         {
             try
             {
-                Converter converter = new Converter(10);
+                Converter converter = new Converter();
                 Checker checker = new Checker();
                 if(checker.IsOkay(Input1.Text, true, Convert.ToInt32(Input2.Text)))
                 {
                     string bufer = converter.Convert_from(Input1.Text, Convert.ToInt32(Input2.Text));
                     OutputLB.Text = converter.Convert_to(bufer, Convert.ToInt32(Input3.Text));
 
-                    history.AddCalculation(Input1.Text, Input2.Text,
-                                            converter.Convert_to(bufer, Convert.ToInt32(Input3.Text)), Input3.Text);
+                    history.AddCalculation(Input1.Text, Input2.Text, OutputLB.Text, Input3.Text);
                 }
             }
             catch(Exception z)
@@ -277,13 +276,6 @@ namespace PT_1_v2
                     throw new Exception("Out of range");
             }
         }
-        #endregion
-
-        private void историяToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2(history);
-            form2.Show();
-        }
 
         private void Input1_TextChanged(object sender, EventArgs e)
         {
@@ -292,7 +284,7 @@ namespace PT_1_v2
             {
                 checker.IsOkay(Input1.Text, true, Convert.ToInt32(Input2.Text));
             }
-            catch(Exception z)
+            catch (Exception z)
             {
                 if (Input1.Text.Length > 1)
                 {
@@ -304,6 +296,13 @@ namespace PT_1_v2
                     Input1.Text = "";
                 }
             }
+        }
+        #endregion
+
+        private void историяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(history);
+            form2.Show();
         }
 
         private void справкаToolStripMenuItem_Click(object sender, EventArgs e)

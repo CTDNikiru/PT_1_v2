@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace PT_1_v2
 {
@@ -13,11 +10,6 @@ namespace PT_1_v2
             if(input.Length == 0)
             {
                 throw new Exception("Empty input");
-            }
-
-            if(input.Length == 1 && (input[0] == ','|| input[0] == '.'))
-            {
-                throw new Exception("Enter more symbols");
             }
 
             bool haveSeparator = false;
